@@ -1,3 +1,7 @@
+Version 1.1.0 (June 20, 2020)
+* feat: PUT /data
+* feat: PATCH /data
+
 Version 1.0.0 (June 19, 2020)
 * feat: Edit file with mocked data
 * feat: GET /ping: get ping message

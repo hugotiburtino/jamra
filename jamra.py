@@ -9,7 +9,6 @@ from flask import Flask
 
 jamra = Flask(__name__)
 
-
 @jamra.route("/")
 def base_url():
     """
@@ -46,6 +45,23 @@ def post_data():
     Endpoint for posting mocked data
     """
     return json.loads('{"success":true, "message":"Data created (but not really)" }')
+
+@jamra.route("/data", methods=['PUT'])
+def put_data():
+    """
+    PUT /data
+    Endpoint for putting mocked data
+    """
+    return json.loads('{"success":true, "message":"Data updated (but not really)" }')
+
+@jamra.route("/data", methods=['PATCH'])
+def patch_data():
+    """
+    PATCH /data
+    Endpoint for putting mocked data
+    """
+    return json.loads('{"success":true, "message":"Field of data updated (but not really)" }')
+
 
 if __name__ == "__main__":
     jamra.run(debug=True)
